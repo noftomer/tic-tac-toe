@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>איקס עיגול</title>
+  <link rel="stylesheet" href="tictactoe.css" />
+</head>
+<body>
+  <header>
+    <h1>איקס עיגול</h1>
+    <div id="user-bar" class="user-bar hidden">
+      <span id="user-greeting" class="user-greeting"></span>
+      <button id="logout-btn" class="logout-btn">יציאה</button>
+    </div>
+  </header>
+
+  <!-- מסך התחברות / הרשמה -->
+  <main id="auth-screen" class="auth">
+    <div class="auth-card">
+      <div class="auth-tabs" role="tablist">
+        <button class="auth-tab active" data-auth="login">התחברות</button>
+        <button class="auth-tab" data-auth="register">הרשמה</button>
+      </div>
+
+      <form id="auth-form" class="auth-form" autocomplete="off">
+        <input id="username" type="text" placeholder="שם משתמש" autocomplete="username" />
+        <input id="password" type="password" placeholder="סיסמה" autocomplete="current-password" />
+        <div id="auth-error" class="auth-error hidden"></div>
+        <button id="auth-submit" type="submit" class="auth-submit">התחבר</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- מסך המשחק -->
+  <main id="game-screen" class="hidden">
+    <div class="mode-bar" role="tablist" aria-label="מצב משחק">
+      <button class="mode-btn active" data-mode="pvp">שני שחקנים</button>
+      <button class="mode-btn" data-mode="cpu">נגד המחשב</button>
+    </div>
+
+    <div id="status" class="status">תור השחקן X</div>
+
+    <div id="board" class="board">
+      <button class="cell" data-index="0" aria-label="משבצת 1"></button>
+      <button class="cell" data-index="1" aria-label="משבצת 2"></button>
+      <button class="cell" data-index="2" aria-label="משבצת 3"></button>
+      <button class="cell" data-index="3" aria-label="משבצת 4"></button>
+      <button class="cell" data-index="4" aria-label="משבצת 5"></button>
+      <button class="cell" data-index="5" aria-label="משבצת 6"></button>
+      <button class="cell" data-index="6" aria-label="משבצת 7"></button>
+      <button class="cell" data-index="7" aria-label="משבצת 8"></button>
+      <button class="cell" data-index="8" aria-label="משבצת 9"></button>
+    </div>
+
+    <button id="reset-btn" class="reset-btn">משחק חדש</button>
+  </main>
+
+  <script src="tictactoe.js"></script>
+</body>
+</html>
